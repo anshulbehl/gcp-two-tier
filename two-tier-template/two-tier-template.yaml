@@ -24,6 +24,7 @@ imports:
 - path: subnetwork-template.py
 - path: vm-series-template.py
 - path: two-tier-template.py
+- path: generated.py
 resources:
 - name: two-tier-setup
   type: two-tier-template.py

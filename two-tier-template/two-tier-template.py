@@ -13,16 +13,12 @@
 # limitations under the License.
 
 import uuid
+from generated import *
+
 
 """Creates the Compute Engine."""
 #Variables
 randstr = uuid.uuid4().hex[:6].lower()
-zone = "us-central1-a"
-region = "us-central1"
-sshkey = "admin:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6VfvLtgxxVgKdRLSgJBewzxNB4xKFSHInnekC2FxVQ8bpqSd1/30nLsXPc1r/NLPMFEU4H5KZuizz7cLYpfn//oPfOpInK5L71GoYb6P/vs+7bg+UcH/nETKjXS4RW9VSfJK4CefI4C9DZETikIdQjQH7H87gu3xP/KH6Kb2QwLMHQGtgfv8ps5vh27VE9hBW+F/p3K/D+5KfUE1PaJEAHfe1d52Op3f3+O2EXIk5P4aNde4+i4rUr8o8QDGohi5YkumlEmjSw3w5b7yqxw0aBNS5jGB+yAKJlln4DDEpJUsosbUOgy2qwMrwiH2cqUgQygYOwc0ov4MEtIh9dtCH admin"
-bootstrap_bucket = "2tier-bootstrap"
-scripts_bucket = "2tier-bootstap"
-serviceaccount = "service-account@p-64cslcy0bvfp-0.iam.gserviceaccount.com"
 
 
 image = "vmseries-flex-byol-1000"
@@ -60,7 +56,7 @@ def GenerateConfig(unused_context):
           'untrust-network': untrust_network,
           'untrust-subnet': untrust_subnet,
           'image': image,
-          'bootstrapbucket': bootstrap_bucket,
+          #'bootstrapbucket': bootstrap_bucket,
           'sshkey': sshkey,
           'serviceaccount': serviceaccount
       }
@@ -77,7 +73,7 @@ def GenerateConfig(unused_context):
           'imageWeb': imageWeb,
           'sshkey': sshkey,
           'serviceaccount': serviceaccount,
-          'bootstrapbucket': scripts_bucket,
+          #'bootstrapbucket': scripts_bucket,
       }
   },
   {
