@@ -13,13 +13,15 @@
 # limitations under the License.
 
 import uuid
-from generated import *
-
+import generated
 
 """Creates the Compute Engine."""
 #Variables
 randstr = uuid.uuid4().hex[:6].lower()
-
+zone = generated.zone
+region = generated.region
+sshkey = generated.sshkey
+serviceaccount = generated.serviceaccount
 
 image = "vmseries-flex-byol-1000"
 mgmt_network = "mgmt-network"
