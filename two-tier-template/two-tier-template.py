@@ -23,7 +23,7 @@ region = generated.region
 sshkey = generated.sshkey
 serviceaccount = generated.serviceaccount
 
-image = "vmseries-flex-byol-1000"
+image = "vmseries-flex-byol-1100"
 mgmt_network = "mgmt-network"
 mgmt_subnet = "mgmt-subnet"
 web_network = "web-network"
